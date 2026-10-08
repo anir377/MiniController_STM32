@@ -12,7 +12,7 @@ Concevoir un PCB destiné à une mini-console, avec écran LCD en haut et joysti
 |---|---|---|
 | Recevoir les commandes | Joysticks et boutons | Nombre, référence, signaux analogiques ou numériques |
 | Traiter les commandes et piloter l'affichage | STM32F4 | Référence et intégration directe ou carte porteuse |
-| Afficher des informations | Module LCD disponible | Référence, capacité graphique, interface et connecteur |
+| Affichage| Module LCD disponible | Référence, capacité graphique, interface et connecteur |
 | Distribuer l'énergie | Entrée, protections et DC/DC du socle commun | Source, tensions, courant et références |
 | Programmer et tester | SWD, UART, LED et bouton de test | Affectation des broches et connecteurs |
 | Maintenir et relier les modules | PCB, connecteurs et fixations | Dimensions, empreintes et dégagements |
