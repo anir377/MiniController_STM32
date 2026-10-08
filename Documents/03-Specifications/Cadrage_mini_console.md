@@ -21,8 +21,6 @@ Concevoir un PCB destiné à une mini-console, avec écran LCD en haut et joysti
 
 Priorité : écran, commandes, STM32, alimentation, programmation/test et interfaces nécessaires. Batterie rechargeable, audio et microSD étaient présents dans le premier schéma bloc ; ils ne sont pas des choix validés et ne sont pas retenus d'office dans cette base. À décider : conservés, prévus en option ou retirés.
 
-Le développement du jeu est une étape ultérieure envisagée par l'équipe. Faire confirmer au professeur les livrables logiciels et tests qui restent attendus : la priorité donnée au PCB ne modifie pas automatiquement les exigences du cours.
-
 ## Deux architectures possibles, à départager
 
 | Variante | Contenu du PCB conçu | Conséquence |
