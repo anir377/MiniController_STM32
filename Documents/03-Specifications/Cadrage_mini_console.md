@@ -42,7 +42,7 @@ Le symbole STM32F446RETx du template n'identifie pas à lui seul la carte effect
 | Nombre de couches | 4 selon le guide | Mettre à jour les réglages KiCad |
 | Fabrication seule ou assemblage | À confirmer | Consignes + prestation fournisseur |
 
-## Questions à poser en priorité
+## Questions 
 
 1. Le MCU doit-il obligatoirement être soudé sur notre PCB ?
 2. Quels composants et interfaces communs faut-il impérativement intégrer ?
