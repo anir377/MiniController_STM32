@@ -4,10 +4,10 @@
 
 ```mermaid
 flowchart TB
-    P["Entrée d'alimentation à définir"] --> A["Protections et DC/DC à choisir"]
+    P["Entrée d'alimentation (USB Piles?) "] --> A["Protections et DC/DC à choisir"]
     A --> M["Bloc STM32 : intégration à confirmer"]
-    A --> L["Écran LCD : référence à relever"]
-    A --> J["Joysticks : nombre et référence à relever"]
+    A --> L["Écran LCD "]
+    A --> J["Joysticks "]
     J -->|"Signaux à identifier"| M
     M -->|"Interface à identifier"| L
     D["Programmation SWD et test UART"] <--> M
