@@ -4,7 +4,7 @@
 
 ```mermaid
 flowchart TB
-    P["Entrée d'alimentation (USB Piles?) "] --> A["Protections et DC/DC à choisir"]
+    P["Entrée d'alimentation (Piles?) "] --> A["Protections et DC/DC à choisir"]
     A --> M["Bloc STM32 : intégration à confirmer"]
     A --> L["Écran LCD "]
     A --> J["Joysticks "]
