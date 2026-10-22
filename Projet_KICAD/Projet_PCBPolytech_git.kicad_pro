@@ -531,11 +531,53 @@
         "wire_width": 6
       },
       {
-        "name": "POWER",
+        "name": "CLOCK",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
+        "tuning_profile": ""
+      },
+      {
+        "name": "POWER_3V3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 5,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "POWER_5V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "SIGNAL_ANALOG",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "SIGNAL_AUDIO",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
+        "name": "SIGNAL_LOW_SPEED",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
         "tuning_profile": ""
       }
     ],
@@ -543,7 +585,74 @@
       "version": 5
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "+3V3": [
+        "POWER_3V3"
+      ],
+      "/5V_SYS": [
+        "POWER_5V"
+      ],
+      "/5V_VIN": [
+        "POWER_5V"
+      ],
+      "/AUDIO_EN": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/AUDIO_IN": [
+        "SIGNAL_ANALOG"
+      ],
+      "/BTN_SELECT": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/BTN_START": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/HSE_IN": [
+        "CLOCK"
+      ],
+      "/HSE_OUT": [
+        "CLOCK"
+      ],
+      "/JOY1_SW": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JOY1_X": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JOY1_Y": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JTAG_TCK": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JTAG_TDI": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JTAG_TDO": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JTAG_TMS": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/JTAG_TRST": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/RESET_STM_N": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/SPK_N": [
+        "SIGNAL_AUDIO"
+      ],
+      "/SPK_P": [
+        "SIGNAL_AUDIO"
+      ],
+      "/UART_DBG_RX": [
+        "SIGNAL_LOW_SPEED"
+      ],
+      "/UART_DBG_TX": [
+        "SIGNAL_LOW_SPEED"
+      ]
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -674,7 +783,7 @@
         "uuid": "4cd5a3a6-441a-4d49-b89e-ac57047910ed"
       }
     ],
-    "used_designators": "U1-3,R1-4,J1-2,J5,#PWR1-6,#PWR16-22,D1-2,C1-3,C14-15,SW1-2,TP1",
+    "used_designators": "U1-3,Switch_ON/OF1,R1-4,J1-2,J5,#PWR1-6,#PWR16-22,#PWR33,D1-2,C1-3,C14-15,SW1-2,R_SD1,TP1",
     "variants": []
   },
   "sheets": [
