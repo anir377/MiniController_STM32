@@ -1,52 +1,37 @@
-# MiniController STM32 — Projet PCB 5A Polytech
+# Mini-console STM32 — Projet PCB
 
-Projet issu du modèle **Projet_PCB_FISE_5A_POLYTECH**. Préparation mise à jour le 8 octobre 2026.
+Projet réalisé en binôme dans le cadre de la 5e année à **Polytech Nice Sophia**, en spécialité systèmes embarqués.
 
-## Objectif actuel
+## Présentation du projet
 
-Concevoir avec KiCad une carte électronique pour une mini-console : **écran LCD en haut, petits joysticks en bas**. La priorité est le schéma, les connexions, le placement, le routage et les fichiers de fabrication du PCB. L'intégration et le logiciel de jeu seront abordés ensuite selon le temps disponible et les attendus du professeur.
+Notre objectif est de concevoir une carte électronique pour une mini-console de jeu portable. Elle doit réunir un écran TFT, des commandes de jeu, un lecteur microSD, une sortie audio et un moteur vibrant pour le retour haptique. Le travail porte actuellement sur la conception du schéma électronique sous KiCad, le choix des composants et la préparation du futur PCB.
 
-L'équipe dispose d'un écran, de joysticks et d'une carte STM32. Leurs références exactes restent à relever. Cette documentation est une **base de travail à compléter avec le binôme**, pas une conception validée.
+Le microcontrôleur retenu est le **STM32F405RGT6** (ARM Cortex-M4, 168 MHz, 1 Mo de Flash et 192 Ko de RAM), monté directement sur notre carte.
 
-## À ouvrir en premier
+## Composants et blocs électroniques
 
-| Document | Usage |
-|---|---|
-| [Préparation de la séance](Documents/01-Planning-Budget/Preparation_09-10-2026.md) | Ordre de travail et premiers exercices KiCad |
-| [Périmètre et fonctions](Documents/03-Specifications/Cadrage_mini_console.md) | Besoin, décisions et questions au professeur |
-| [Architecture à compléter](Documents/02-Architecture-Diagrammes/MiniConsole_architecture.md) | Diagramme visible sur GitHub et fichier Draw.io éditable |
-| [Composants et documentation](Datasheet/README.md) | Fiches à remplir et liens officiels ST |
-| [Table de connexions](Documents/11-Pin-Out%20MCU/Connexions_a_completer.md) | Broches des modules, connecteurs et STM32 |
-| [Bilan d'alimentation](Documents/13-Bilan%20Puissance%20etThermique/Power_budget_a_completer.md) | Tensions et courants à renseigner |
+L'alimentation est prévue à partir d'un **connecteur USB-C**, avec des composants de protection et un convertisseur abaisseur **TLV62569DBV** pour obtenir les 3,3 V nécessaires au système. Les condensateurs de découplage du STM32 ont également été ajoutés. Une alimentation sur batterie est envisagée, mais son circuit de charge et de gestion reste à concevoir.
 
-## Point d'architecture à trancher
+Pour l'affichage, nous avons prévu un **écran TFT SPI de 4 pouces (480 × 320 pixels)**. Une interface **microSD**, accessible sur le module écran, utilise une liaison SPI distincte pour le stockage des ressources ou des jeux. Les commandes comprennent un **joystick analogique à deux axes avec bouton intégré** et des boutons supplémentaires, notamment Start et Select.
 
-Le template KiCad contient le symbole **STM32F446RETx** : il prévoit un microcontrôleur directement sur le PCB. Il faut confirmer avec le professeur si la carte STM32 disponible sert uniquement aux essais, ou si une carte porteuse accueillant cette carte complète est autorisée. Ces deux solutions n'ont ni les mêmes connecteurs ni le même schéma.
+La partie audio comporte un circuit d'amplification et un connecteur pour haut-parleur ; elle est encore en cours de finalisation. Nous avons aussi ajouté un **moteur vibrant ERM** (LCM1027A2445F), commandé par un MOSFET AO3400A et un signal PWM du STM32, avec diode de protection et composants associés.
 
-Même si l'écran et les joysticks sont montés plus tard, leurs tensions, brochages, dimensions et fixations doivent être connus avant de fabriquer la carte.
+Le schéma prévoit par ailleurs un **quartz externe (HSE)**, un connecteur de programmation/débogage de type **JTAG/SWD** et un connecteur UART pour le diagnostic. Ces interfaces doivent encore être vérifiées et raccordées complètement.
 
-## État réel au 8 octobre 2026
+## Configuration du STM32
 
-- Idée et premier schéma bloc discutés ; références matérielles non confirmées.
-- Projet KiCad et documents techniques hérités du template présents.
-- Nouveau dossier de préparation ajouté ; les cases restent à compléter.
-- Aucun pinout final, aucun circuit validé et aucun fichier prêt à fabriquer.
-- Le guide prévoit un PCB **4 couches** ; le fichier PCB hérité est actuellement configuré en **2 couches**, à ajuster avant le routage.
+Nous utilisons **STM32CubeMX** pour préparer l'affectation des broches et des périphériques du STM32. Le fichier `MiniConsole_STM32.ioc` contient notamment les configurations de SPI1 pour l'écran, SPI2 pour la microSD, ADC1 pour le joystick et TIM4 pour la commande PWM du moteur vibrant.
 
-## Les outils
+Ces choix doivent rester cohérents avec les connexions du schéma KiCad. Le développement et les essais du firmware ne constituent pas encore un livrable terminé.
 
-- **KiCad** : schéma électrique, empreintes, placement, pistes et exports de fabrication.
-- **STM32CubeMX** : sélection du STM32 et configuration de ses broches/périphériques.
-- **Draw.io** : diagrammes fonctionnels et matériels.
-- **GitHub** : partage des fichiers et historique des modifications.
+## Avancement et travail restant
 
-Pour commencer dans KiCad, ouvrir `Projet_KICAD/Projet_PCBPolytech_git.kicad_pro`. Faire les exercices de découverte dans un projet séparé.
+Les principaux blocs de la mini-console sont maintenant représentés dans le schéma. **Le projet est encore en phase de conception et n'est pas prêt à être fabriqué.** Il reste notamment à vérifier l'ensemble des réseaux d'alimentation, terminer les connexions de programmation, du quartz, des boutons et de l'audio, ainsi qu'à valider les caractéristiques et les empreintes des composants.
 
-## Travail à deux sur GitHub
+Les prochaines étapes seront la correction des erreurs ERC, la finalisation des bibliothèques et des références JLCPCB, puis le placement et le routage du **PCB quatre couches**, avant la préparation des fichiers de fabrication et d'assemblage.
 
-1. Récupérer la dernière version avant de travailler (pull).
-2. Se répartir les fichiers ; éviter les modifications simultanées d'un même schéma ou PCB KiCad.
-3. Enregistrer dans le logiciel, puis créer un commit avec un message clair.
-4. Envoyer le commit sur GitHub (push) pour que le binôme puisse le récupérer.
+## Fichiers du dépôt
 
-Un commit est une étape enregistrée de l'historique. Une sauvegarde locale KiCad seule ne met pas GitHub à jour. Les fichiers `empty.md` sont des repères du template et peuvent rester tant que leur dossier est en cours de remplissage.
+- **[Projet KiCad](Projet_KICAD/Projet_PCBPolytech_git.kicad_pro)** : projet électronique à ouvrir dans KiCad.
+- **[Schéma KiCad](Projet_KICAD/Projet_PCBPolytech_git.kicad_sch)** : schéma électrique en cours de réalisation.
+- **[Configuration STM32CubeMX](MiniConsole_STM32.ioc)** : affectation des broches et configuration des périphériques.
