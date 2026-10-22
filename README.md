@@ -35,6 +35,3 @@ Les prochaines étapes seront la correction des erreurs ERC, la finalisation des
 - **[Projet KiCad](Projet_KICAD/Projet_PCBPolytech_git.kicad_pro)** : projet électronique à ouvrir dans KiCad.
 - **[Schéma KiCad](Projet_KICAD/Projet_PCBPolytech_git.kicad_sch)** : schéma électrique en cours de réalisation.
 - **[Configuration STM32CubeMX](MiniConsole_STM32.ioc)** : affectation des broches et configuration des périphériques.
-- **[Bibliothèques personnalisées](Projet_KICAD/Libraries)** : symboles et empreintes utilisés pour certains composants.
-
-*État d'avancement : 22 octobre 2026.*
