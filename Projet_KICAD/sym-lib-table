@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "BQ24075RGTR_clean") (type "KiCad") (uri "C:/Users/msi/Desktop/BQ24075RGTR_clean.kicad_sym") (options "") (descr ""))
+	(lib (name "TPS63070RNMR") (type "KiCad") (uri "${KIPRJMOD}/Libs/TPS63070RNMR.kicad_sym") (options "") (descr ""))
+)
