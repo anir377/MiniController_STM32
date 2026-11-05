@@ -167,8 +167,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 15.24 0)
+			(property "Reference" "U12"
+				(at 0 16.51 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -178,7 +178,7 @@
 				)
 			)
 			(property "Value" "BQ24075RGTR"
-				(at 0 12.7 0)
+				(at 0 13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -414,7 +414,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin passive line
 					(at 17.78 7.62 180)
 					(length 5.08)
 					(name "OUT"
@@ -5816,6 +5816,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Motor:Motor_DC"
 			(pin_names
 				(offset 0)
@@ -6600,8 +6699,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 12.7 0)
+			(property "Reference" "U7"
+				(at 0 15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -6611,7 +6710,7 @@
 				)
 			)
 			(property "Value" "TPS63070RNMR"
-				(at 0 -12.7 0)
+				(at 0 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -6829,24 +6928,6 @@
 					)
 				)
 				(pin unspecified line
-					(at -13.97 -7.62 0)
-					(length 2.54)
-					(name "Vout"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
 					(at 13.97 -7.62 180)
 					(length 2.54)
 					(name "L2"
@@ -6947,6 +7028,26 @@
 						)
 					)
 					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TPS63070RNMR_1_1"
+				(pin power_out line
+					(at -13.97 -7.62 0)
+					(length 2.54)
+					(name "Vout"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8640,6 +8741,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "ampli_son"
 		(exclude_from_sim no)
@@ -9391,6 +9607,12 @@
 		(uuid "e3582e30-e87f-4c35-8c3c-8f73fa04b078")
 	)
 	(junction
+		(at 21.59 17.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6df9084-af9f-48bb-bed7-f3235f024b2d")
+	)
+	(junction
 		(at 97.79 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9407,6 +9629,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f1d9a326-f180-4456-a994-3319544d79a2")
+	)
+	(junction
+		(at 43.18 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4b1f7c5-f23c-469e-93b2-37d568de7c47")
 	)
 	(junction
 		(at 156.21 107.95)
@@ -9449,6 +9677,10 @@
 	(no_connect
 		(at 149.86 88.9)
 		(uuid "65c2f0de-5546-482f-89e0-59d4f7567215")
+	)
+	(no_connect
+		(at 143.51 259.08)
+		(uuid "6616109e-e2d3-4ca8-b602-aeea6ed1654a")
 	)
 	(no_connect
 		(at 149.86 86.36)
@@ -10856,6 +11088,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 99.06) (xy 43.18 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7109531b-1c71-41ed-8490-91ff93e0701f")
+	)
+	(wire
+		(pts
 			(xy 156.21 115.57) (xy 158.75 115.57)
 		)
 		(stroke
@@ -10933,6 +11175,16 @@
 			(type default)
 		)
 		(uuid "73885ec2-b5f2-4c81-9b98-fa1d1dfdb4d0")
+	)
+	(wire
+		(pts
+			(xy 21.59 17.78) (xy 21.59 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74f14a2b-bb02-464a-b944-559d38ad0598")
 	)
 	(wire
 		(pts
@@ -11283,6 +11535,16 @@
 			(type default)
 		)
 		(uuid "8cac6376-48b6-4498-bd1d-acf75fb2c5ca")
+	)
+	(wire
+		(pts
+			(xy 21.59 16.51) (xy 21.59 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cdf9101-7510-43e6-bc0c-1ea1cf25545b")
 	)
 	(wire
 		(pts
@@ -11736,7 +11998,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 97.79) (xy 45.72 97.79)
+			(xy 39.37 97.79) (xy 43.18 97.79)
 		)
 		(stroke
 			(width 0)
@@ -12253,6 +12515,16 @@
 			(type default)
 		)
 		(uuid "d4b1b11e-b7bd-4913-86ae-0a3d51c7924b")
+	)
+	(wire
+		(pts
+			(xy 43.18 97.79) (xy 45.72 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7866da3-62f6-4cc6-8c4c-007808fb6f0c")
 	)
 	(wire
 		(pts
@@ -16718,7 +16990,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm"
 			(at 161.29 259.08 0)
 			(hide yes)
 			(show_name no)
@@ -16741,6 +17013,17 @@
 			)
 		)
 		(property "Description" "1-cell Li-ion charger with power-path management, QFN-16 RGT"
+			(at 161.29 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C15464"
 			(at 161.29 259.08 0)
 			(hide yes)
 			(show_name no)
@@ -16925,7 +17208,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 45.4152 275.59 0)
 			(hide yes)
 			(show_name no)
@@ -17006,7 +17289,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 37.7952 275.59 0)
 			(hide yes)
 			(show_name no)
@@ -17165,7 +17448,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical"
 			(at 83.82 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -17423,7 +17706,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 8.382 266.7 90)
 			(hide yes)
 			(show_name no)
@@ -18336,7 +18619,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
+		(property "Footprint" "ALibrary_footprint:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
 			(at 15.24 240.03 0)
 			(hide yes)
 			(show_name no)
@@ -18553,6 +18836,82 @@
 			(project "gameboy"
 				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
 					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 134.62 294.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a470919-dafb-415d-b2dd-47a7fd7b613e")
+		(property "Reference" "H3"
+			(at 137.16 293.3699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 137.16 295.9099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 134.62 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 134.62 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "gameboy"
+				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -19244,7 +19603,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_QFP:PQFP-160_28x28mm_P0.65mm"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 67.0052 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -19326,7 +19685,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 153.3652 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -19660,7 +20019,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
+		(property "Footprint" "ALibrary_footprint:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
 			(at 48.26 262.89 0)
 			(hide yes)
 			(show_name no)
@@ -20155,7 +20514,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 54.3052 275.59 0)
 			(hide yes)
 			(show_name no)
@@ -21088,7 +21447,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 64.77 230.378 90)
 			(hide yes)
 			(show_name no)
@@ -21656,7 +22015,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 114.3 256.2352 0)
 			(hide yes)
 			(show_name no)
@@ -21736,7 +22095,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_QFP:PQFP-160_28x28mm_P0.65mm"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 116.84 267.208 90)
 			(hide yes)
 			(show_name no)
@@ -22365,6 +22724,85 @@
 			(project "gameboy"
 				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
 					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 21.59 17.78 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9788146e-04b1-4a8f-93e0-903fad454b05")
+		(property "Reference" "#FLG01"
+			(at 23.495 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 25.4 17.7799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 21.59 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44348a82-d818-43f2-b40f-11c0f78d313a")
+		)
+		(instances
+			(project "gameboy"
+				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -23266,6 +23704,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 151.13 288.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aad61fbb-e651-40df-824d-191b28f7fa8f")
+		(property "Reference" "H2"
+			(at 153.67 287.0199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 153.67 289.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 151.13 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 151.13 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "gameboy"
+				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 213.36 133.35 0)
 		(mirror x)
@@ -23700,7 +24214,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
+		(property "Footprint" "ALibrary_footprint:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
 			(at 46.99 240.03 0)
 			(hide yes)
 			(show_name no)
@@ -23983,7 +24497,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 28.9052 275.59 0)
 			(hide yes)
 			(show_name no)
@@ -24065,7 +24579,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
+		(property "Footprint" "ALibrary_footprint:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
 			(at 16.51 262.89 0)
 			(hide yes)
 			(show_name no)
@@ -24125,6 +24639,83 @@
 			(project "gameboy"
 				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
 					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 43.18 99.06 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b6c53b26-8539-477e-8837-eaf8fd78069d")
+		(property "Reference" "#FLG02"
+			(at 43.18 100.965 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 43.18 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 43.18 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44b6acb2-7682-4179-abf1-eb48b4e3401f")
+		)
+		(instances
+			(project "gameboy"
+				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -24412,7 +25003,7 @@
 				)
 			)
 		)
-		(property "Footprint" "C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 120.65 120.3452 0)
 			(hide yes)
 			(show_name no)
@@ -24570,7 +25161,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 113.03 229.5652 0)
 			(hide yes)
 			(show_name no)
@@ -24731,7 +25322,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_QFP:PQFP-160_28x28mm_P0.65mm"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 137.16 265.938 90)
 			(hide yes)
 			(show_name no)
@@ -25045,6 +25636,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 180.34 293.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c27b4ed8-45a5-4030-bc5f-876d69e9fdfe")
+		(property "Reference" "H1"
+			(at 182.88 292.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 182.88 294.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 180.34 293.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 293.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 180.34 293.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "gameboy"
+				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 115.57 124.46 270)
 		(mirror x)
@@ -25202,6 +25869,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 120.65 284.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc13c62c-baae-45f2-b817-8776f3d08a37")
+		(property "Reference" "H4"
+			(at 123.19 283.2099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 123.19 285.7499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 120.65 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 120.65 284.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "gameboy"
+				(path "/836adad1-09db-4caf-a2aa-df604c5c2ebe"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 96.52 41.91 270)
 		(mirror x)
@@ -25282,7 +26025,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 21.59 19.05 0)
+		(at 21.59 16.51 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -25293,7 +26036,7 @@
 		(dnp no)
 		(uuid "cea9389b-cdfa-4b72-9f5d-be9f49165101")
 		(property "Reference" "#PWR031"
-			(at 21.59 12.7 0)
+			(at 21.59 10.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25304,7 +26047,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 24.13 21.082 0)
+			(at 20.828 16.256 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25315,7 +26058,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 21.59 19.05 0)
+			(at 21.59 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25326,7 +26069,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 21.59 19.05 0)
+			(at 21.59 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25337,7 +26080,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 21.59 19.05 0)
+			(at 21.59 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25393,7 +26136,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 8.382 257.81 90)
 			(hide yes)
 			(show_name no)
@@ -25475,7 +26218,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 74.6252 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -25557,7 +26300,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 83.5152 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -26078,7 +26821,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_QFP:PQFP-160_28x28mm_P0.65mm"
+		(property "Footprint" "Inductor_SMD:L_Coilcraft_XxL4020"
 			(at 58.42 254 0)
 			(hide yes)
 			(show_name no)
@@ -26101,6 +26844,17 @@
 			)
 		)
 		(property "Description" "Inductor"
+			(at 58.42 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C3033018"
 			(at 58.42 254 0)
 			(hide yes)
 			(show_name no)
@@ -27002,7 +27756,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 207.01 251.1552 0)
 			(hide yes)
 			(show_name no)
@@ -27498,7 +28252,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 3.5052 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -27580,7 +28334,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 201.168 265.43 90)
 			(hide yes)
 			(show_name no)
